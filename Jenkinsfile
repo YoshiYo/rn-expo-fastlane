@@ -8,10 +8,15 @@ pipeline {
        CI = 'true'
    }
    stages {
-       stage('Build') {
+       stage('Install') {
            steps {
                sh 'node --version'
                sh 'npm install'
+           }
+       }
+       stage('Test') {
+           steps {
+               sh 'npm test'
            }
        }
    }
