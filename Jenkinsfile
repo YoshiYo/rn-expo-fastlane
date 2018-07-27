@@ -11,6 +11,7 @@ pipeline {
        stage('Install') {
            steps {
                sh 'node --version'
+               sh "echo ------- MOBILE APP -------"
                sh 'npm install'
            }
        }
